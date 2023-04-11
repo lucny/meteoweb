@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <title>Rest API</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css">
+
+  </head>
+  <body>
+    <header class="bg-primary p-3 text-white text-center">
+        <h1 class="display-3">METEOWEB</h1>
+    </header>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="bg-secondary p-3 text-light">Předpověď počasí</h2>
+                <div class="form-group">
+                  <label for="locality">Místo</label>
+                  <input type="text" class="form-control" id="locality" placeholder="Zadej místo">
+                </div>
+                <div class="form-group">
+                  <select class="form-control" id="localities"></select>
+                </div>
+                <div class="form-group">
+                  <button id="submit" class="btn btn-success">Potvrdit</button> <button id="home" class="btn btn-danger">Zjistit polohu</button>
+                </div>
+                <h2 class="bg-secondary p-3 text-light">Aktuální počasí</h2>
+                <div id="currentDay"></div>
+                <h2 class="bg-secondary p-3 text-light">Předpověď na další dny</h2>
+                <div id="nextDays"></div>
+            </div>
+          <div class="col-md-6">
+              <h2 class="bg-secondary p-3 text-light">Mapa</h2>
+              <div id="mapid" style="height: 400px;"></div>
+              <h2 class="bg-secondary p-3 text-light mt-2">Vývoj teploty a tlaku</h2>
+              <canvas id="tempress"></canvas>
+              <h2 class="bg-secondary p-3 text-light mt-2">Srážkové úhrny</h2>
+              <canvas id="precipitation"></canvas>
+          </div>
+      </div>
+  </main> 
+    <footer class="bg-dark text-light p-3 text-center">
+        <p>&copy; 2022 - Marek Lučný</p>
+    </footer> 
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/weather.js"></script>
+  </body>
+</html>
